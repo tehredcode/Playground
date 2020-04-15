@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.Rider2019.3/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_Playground.-1440345233.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p=".mono/temp/bin" t="ExcludeRecursive" />
+      <e p=".mono/temp/obj" t="ExcludeRecursive" />
+      <e p="Playground.csproj" t="IncludeRecursive" />
+      <e p="Playground.sln" t="IncludeFlat" />
+      <e p="Properties" t="Include">
+        <e p="AssemblyInfo.cs" t="Include" />
+      </e>
+      <e p="assets" t="Include">
+        <e p="black.png" t="Include" />
+        <e p="black.png.import" t="Include" />
+        <e p="blackselected.png" t="Include" />
+        <e p="blackselected.png.import" t="Include" />
+        <e p="sidebarbackground.png" t="Include" />
+        <e p="sidebarbackground.png.import" t="Include" />
+        <e p="tileset" t="Include">
+          <e p="CA tileset.png" t="Include" />
+          <e p="CA tileset.png.import" t="Include" />
+        </e>
+        <e p="ui_theme.svg" t="Include" />
+        <e p="ui_theme.svg.import" t="Include" />
+        <e p="white.png" t="Include" />
+        <e p="white.png.import" t="Include" />
+        <e p="whiteselected.png" t="Include" />
+        <e p="whiteselected.png.import" t="Include" />
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="scenes" t="Include">
+        <e p="Node2D.tscn" t="Include" />
+        <e p="UI.tscn" t="Include" />
+        <e p="btngrpTiles.tres" t="Include" />
+      </e>
+      <e p="scripts" t="Include">
+        <e p="Camera2D.cs" t="Include" />
+        <e p="Node2D.cs" t="Include" />
+        <e p="TileMap.cs" t="Include" />
+        <e p="Timer.cs" t="Include" />
+        <e p="btnStart.cs" t="Include" />
+        <e p="btnStop.cs" t="Include" />
+      </e>
+    </e>
+  </component>
+</project>

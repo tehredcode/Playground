@@ -1,0 +1,2 @@
+﻿41503
+/home/tehredcode/gamedev/Godot/Godot_v3.2-stable_mono_x11_64/Godot_v3.2-stable_mono_x11.64

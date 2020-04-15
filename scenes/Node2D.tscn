@@ -1,0 +1,192 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://scripts/Camera2D.cs" type="Script" id=1]
+[ext_resource path="res://assets/tileset/CA tileset.png" type="Texture" id=2]
+[ext_resource path="res://assets/blackselected.png" type="Texture" id=3]
+[ext_resource path="res://scripts/TileMap.cs" type="Script" id=4]
+[ext_resource path="res://scripts/Timer.cs" type="Script" id=5]
+[ext_resource path="res://assets/black.png" type="Texture" id=6]
+[ext_resource path="res://assets/ui_theme.svg" type="Texture" id=7]
+[ext_resource path="res://assets/white.png" type="Texture" id=8]
+[ext_resource path="res://assets/whiteselected.png" type="Texture" id=9]
+[ext_resource path="res://scenes/btngrpTiles.tres" type="ButtonGroup" id=10]
+[ext_resource path="res://scripts/Node2D.cs" type="Script" id=11]
+[ext_resource path="res://scripts/btnStart.cs" type="Script" id=12]
+[ext_resource path="res://scripts/btnStop.cs" type="Script" id=13]
+
+[sub_resource type="TileSet" id=1]
+0/name = "White"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Black"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 32, 0, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Green"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 32, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Blue"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 32, 32, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shapes = [  ]
+3/z_index = 0
+
+[node name="Node2D" type="Node"]
+pause_mode = 2
+script = ExtResource( 11 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.109
+script = ExtResource( 5 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="MarginContainer" parent="CanvasLayer"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -20.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI"]
+margin_right = 41.0
+margin_bottom = 20.0
+mouse_filter = 2
+size_flags_horizontal = 0
+
+[node name="btnStart" type="Button" parent="CanvasLayer/UI/HBoxContainer"]
+margin_right = 41.0
+margin_bottom = 20.0
+custom_colors/font_color_hover = Color( 0.654902, 0.129412, 0.129412, 1 )
+text = "Start"
+script = ExtResource( 12 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/UI"]
+margin_right = 480.0
+margin_bottom = 20.0
+mouse_filter = 2
+alignment = 1
+
+[node name="btnStop" type="Button" parent="CanvasLayer/UI/HBoxContainer2"]
+margin_left = 220.0
+margin_right = 260.0
+margin_bottom = 20.0
+text = "Stop"
+script = ExtResource( 13 )
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/UI"]
+margin_right = 480.0
+margin_bottom = 20.0
+mouse_filter = 2
+alignment = 2
+
+[node name="btnReset" type="Button" parent="CanvasLayer/UI/HBoxContainer3"]
+margin_left = 432.0
+margin_right = 480.0
+margin_bottom = 20.0
+size_flags_horizontal = 0
+text = "Reset"
+align = 2
+
+[node name="Sidebar" type="MarginContainer" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -40.0
+margin_top = 10.0
+margin_bottom = -40.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="NinePatchRect" parent="CanvasLayer/Sidebar"]
+margin_right = 40.0
+margin_bottom = 220.0
+texture = ExtResource( 7 )
+region_rect = Rect2( 525, 863, 517, 514 )
+patch_margin_right = 10
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="TileContainer" type="VBoxContainer" parent="CanvasLayer/Sidebar"]
+margin_left = 4.0
+margin_top = 72.0
+margin_right = 36.0
+margin_bottom = 147.0
+rect_min_size = Vector2( 32, 75 )
+mouse_filter = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+alignment = 1
+
+[node name="BlackTile" type="TextureButton" parent="CanvasLayer/Sidebar/TileContainer"]
+margin_top = 3.0
+margin_right = 32.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 5
+size_flags_vertical = 8
+toggle_mode = true
+group = ExtResource( 10 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 3 )
+
+[node name="WhiteTile" type="TextureButton" parent="CanvasLayer/Sidebar/TileContainer"]
+margin_top = 39.0
+margin_right = 32.0
+margin_bottom = 71.0
+toggle_mode = true
+group = ExtResource( 10 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0 )
+script = ExtResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="TileMap"]
+position = Vector2( 1, 0 )
+anchor_mode = 0
+current = true
+script = ExtResource( 1 )
+[connection signal="timeout" from="Timer" to="TileMap" method="_on_Timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/UI/HBoxContainer/btnStart" to="Timer" method="_on_btnStart_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/HBoxContainer2/btnStop" to="Timer" method="_on_btnStop_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/HBoxContainer3/btnReset" to="TileMap" method="_on_btnReset_pressed"]
+[connection signal="pressed" from="CanvasLayer/Sidebar/TileContainer/BlackTile" to="." method="_on_BlackTile_pressed"]
+[connection signal="pressed" from="CanvasLayer/Sidebar/TileContainer/WhiteTile" to="." method="_on_WhiteTile_pressed"]

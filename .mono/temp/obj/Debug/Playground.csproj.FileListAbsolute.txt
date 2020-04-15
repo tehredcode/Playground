@@ -1,0 +1,6 @@
+/home/tehredcode/gamedev/Godot/Projects/Playground/.mono/temp/obj/Debug/Playground.csprojAssemblyReference.cache
+/home/tehredcode/gamedev/Godot/Projects/Playground/.mono/temp/obj/Debug/Playground.csproj.CoreCompileInputs.cache
+/home/tehredcode/gamedev/Godot/Projects/Playground/.mono/temp/bin/Debug/Playground.dll
+/home/tehredcode/gamedev/Godot/Projects/Playground/.mono/temp/bin/Debug/Playground.pdb
+/home/tehredcode/gamedev/Godot/Projects/Playground/.mono/temp/obj/Debug/Playground.dll
+/home/tehredcode/gamedev/Godot/Projects/Playground/.mono/temp/obj/Debug/Playground.pdb
